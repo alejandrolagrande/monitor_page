@@ -1,0 +1,32 @@
+<div class="center jumbotron">
+
+  <h2>
+    <br />
+    Project Schedule 
+    <br />
+  </h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Start.</th>
+        <th>Finish</th>
+      </tr>
+    </thead>
+    <tbody>
+       <% $task.each do |node| %>
+        <tr>
+          <td><%= node.to_a[0] %></td>
+          <td><%= node.to_a[1] %></td>
+          <td><%= node.to_a[2] %></td>
+        </tr>
+       <% end %>
+    </tbody>
+  </table>
+
+
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+
